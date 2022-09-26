@@ -1,8 +1,8 @@
 // Please correct any type annotation problems here! ✨
-let arugula: number;
-let dressing: string;
-let lettuce: number;
-let mealDate: string;
+let arugula: 2 | undefined;
+let dressing: "honey dijon" | "balsamic vinaigrette";
+let lettuce: 1 | undefined;
+let mealDate: Date;
 
 arugula = 2;
 dressing = "honey dijon";
