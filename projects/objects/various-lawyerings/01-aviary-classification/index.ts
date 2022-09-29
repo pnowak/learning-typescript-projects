@@ -1,3 +1,11 @@
+type Bird = {
+	name: string;
+	diet: "omnivore" | "carnivore";
+	noisy?: true;
+	intelligent?: true;
+	dangerous?: true;
+};
+
 export const birds: Bird[] = [
 	{
 		dangerous: true,
