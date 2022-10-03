@@ -13,7 +13,7 @@ type Denied = {
 
 type Pending = {
 	status: "pending";
-	deliberationHours: number;
+	estimatedDeliberationHours: number;
 };
 
 type Status = Allowed | Denied | Pending;
@@ -64,7 +64,7 @@ export const motions: Motion[] = [
 	},
 	{
 		classification: "new trial",
-		deliberationHours: 3,
+		estimatedDeliberationHours: 3,
 		from: "defendant",
 		reason: "The duel's been accepted. There's no backing out. That's the law.",
 		status: "pending",
