@@ -34,6 +34,6 @@ describe(announceCharacter, () => {
 			side: "evil",
 		});
 
-		expectType<solution.Character>(actual);
+		expectType<index.Character>(actual);
 	});
 });
