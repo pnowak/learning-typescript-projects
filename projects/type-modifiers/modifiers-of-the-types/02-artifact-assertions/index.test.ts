@@ -9,7 +9,7 @@ const { getArtifactType } = process.env.TEST_SOLUTIONS ? solution : index;
 describe(getArtifactType, () => {
 	describe("type", () => {
 		it("is a union of literals", () => {
-			const type = getArtifactType("Black Garnet" as solution.ArtifactName);
+			const type = getArtifactType("Black Garnet" as index.ArtifactName);
 
 			expectType<"device" | "fortress" | "magic" | "sword">(type);
 		});
@@ -25,7 +25,7 @@ describe(getArtifactType, () => {
 			["sword", "Sword of the Ancients"],
 		])(
 			"returns %j when the name is %j",
-			(expected: string, name: solution.ArtifactName) => {
+			(expected: string, name: index.ArtifactName) => {
 				expect(getArtifactType(name)).toBe(expected);
 			}
 		);

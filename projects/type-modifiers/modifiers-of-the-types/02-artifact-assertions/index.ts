@@ -14,4 +14,10 @@ const artifacts = {
 	Starseed: {
 		type: "magic",
 	},
+} as const;
+
+export type ArtifactName = keyof typeof artifacts;
+
+export const getArtifactType = (artifactName: ArtifactName) => {
+	return artifacts[artifactName].type;
 };
