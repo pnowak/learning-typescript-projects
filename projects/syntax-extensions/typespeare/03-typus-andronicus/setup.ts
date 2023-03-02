@@ -1,7 +1,9 @@
-export interface Setup {
+interface Setup {
 	description: string;
 	setting: string;
 }
+
+export type { Setup };
 
 export type SetupCreator = (character: string) => Setup;
 

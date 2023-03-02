@@ -1,17 +1,19 @@
-import { Setup } from "./setup";
+import type { Setup } from "./setup";
 
 export type ConflictSeverity = "mild" | "moderate" | "severe";
 
-export interface Conflict {
+interface Conflict {
 	description: string;
 	severity: ConflictSeverity;
 	type: string;
 }
 
-export interface ConflictCreatorSettings {
+interface ConflictCreatorSettings {
 	character: string;
 	setup: Setup;
 }
+
+export type { Conflict, ConflictCreatorSettings };
 
 export type ConflictCreator = (settings: ConflictCreatorSettings) => Conflict;
 

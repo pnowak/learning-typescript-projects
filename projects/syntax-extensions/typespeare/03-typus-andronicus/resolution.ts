@@ -1,16 +1,18 @@
-import { Conflict } from "./conflict";
-import { Setup } from "./setup";
+import type { Conflict } from "./conflict";
+import type { Setup } from "./setup";
 
-export interface Resolution {
+interface Resolution {
 	description: string;
 	morbidity: "light" | "moderate" | "deadly";
 }
 
-export interface ResolutionCreatorSettings {
+interface ResolutionCreatorSettings {
 	character: string;
 	conflict: Conflict;
 	setup: Setup;
 }
+
+export type { Resolution, ResolutionCreatorSettings };
 
 export type ResolutionCreator = (
 	settings: ResolutionCreatorSettings
